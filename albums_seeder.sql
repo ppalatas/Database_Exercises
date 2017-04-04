@@ -1,9 +1,11 @@
 use codeup_test_db;
 
+truncate albumsOverFourtyMillion;
+
 insert into albumsOverFourtyMillion(Artist, Album, Released, Sales_Certification, Genre)
 	values ("Michael Jackson", "Thriller", 1982, 46000000,"Pop, rock, R&B"),
 
-("AC/DC", "Back in Black", 1980, 26100000,"Hard rock"),
+("AC/DC", "Back in Black", 1980, 26100000, "Hard rock"),
 
 ("Pink Floyd", "The Dark Side of the Moon", "1973", 24200000, "Progressive rock"),
 
