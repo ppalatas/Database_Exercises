@@ -45,17 +45,26 @@ select distinct title
 from titles 
 order by titles ASC;
 
+
+-- or 
+-- select by title 
+-- from titles
+-- group by title;
+
+
+
+
+
 -- Find your query for employees whose last names start and end with 'E'. 
 
 select last_name from employees
-where last_name like "E%" 
-	and last_name like "%e";
+where last_name like "e%e" 
+
 
 -- Update the query find just the unique last names that start and end with 'E' using GROUP BY. The results should be:
 select last_name
 from employees
-where last_name like "E%" 
-	and last_name like "%e"
+where last_name like "e%e" 
 group by last_name;
 
 -- Update your previous query to now find unique 

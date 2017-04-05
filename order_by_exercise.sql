@@ -16,11 +16,8 @@ WHERE (first_name = 'Irena'
 
 -- Change the order by clause so that you order by last name before first name. 
 -- Your first result should still be Irena Acton but now the last result should be Maya Zyda.
-SELECT *
-FROM employees
-WHERE (first_name = 'Irena'
-	OR first_name = 'Vidya'
-	OR first_name = 'Maya')
+SELECT * FROM employees
+WHERE (first_name IN ('Irena', 'Vidya', 'Maya')
 		AND gender = 'M'
 	order by last_name, first_name ASC;
 
@@ -37,8 +34,8 @@ order by emp_no DESC;
 --  the first result is the oldest employee who was hired last. It should be Khun Bernini.
 
 select * from employees 
-where hire_date between "1990-01-01" and "1999-12-31" 
-and birth_date like "%-12-25"
+where hire_date between "1990-01-01" and "1999-12-31"  -- Or " like "199%" "
+and birth_date like "%12-25"
 order by birth_date, hire_date DESC;
 
 
